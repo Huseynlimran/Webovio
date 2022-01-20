@@ -1,0 +1,449 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+$brandColor: rgb(255, 215, 35);
+$textColor: rgba(77, 83, 60, 1);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+header {
+  background: url(img/Bitmap.png) no-repeat fixed;
+  background-size: cover;
+  height: 100vh;
+  .sticky {
+    background-color: rgba(0, 0, 0, 0.267);
+    max-width: 100%;
+    margin: 0 auto;
+    transition: all 0.4s;
+    padding: 0 5%;
+    box-shadow: 0 2px 20px rgba(83, 83, 83, 0.801);
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 12vh;
+    width: 100%;
+    transition: all 0.4s ease;
+    ul {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 50%;
+      height: 88vh;
+      top: 12vh;
+      right: -10%;
+      background-color: rgba(255, 255, 255, 0.041);
+      backdrop-filter: blur(5.5px);
+      transform: translateX(150%);
+      transition: all 0.5s ease-in-out;
+      li {
+        list-style: none;
+        a {
+          text-decoration: none;
+          color: rgb(0, 0, 0);
+          font-size: 1.4em;
+          transition: 0.4s;
+          &:hover {
+            color: $brandColor;
+          }
+        }
+      }
+    }
+    .burger {
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.801);
+      border-radius: 50%;
+      padding: 10px;
+      width: 40px;
+      div {
+        width: 20px;
+        height: 3px;
+        background-color: black;
+        transition: all 0.4s;
+      }
+      .line2 {
+        margin: 5px 0;
+      }
+    }
+    .nav-active {
+      transform: translateX(0);
+    }
+    .toggle .line1 {
+      transform: translateX(30%);
+    }
+    .toggle .line3 {
+      transform: translateX(-30%);
+    }
+  }
+  .home {
+    h1 {
+      font-size: 60px;
+      font-weight: bold;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      i {
+        color: $brandColor;
+        padding-right: 5px;
+      }
+      text-decoration: none;
+      color: $brandColor;
+      transition: all 0.4s;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+  .text {
+    position: absolute;
+    right: 0;
+    bottom: -10%;
+    background-color: rgb(247, 247, 247);
+    width: 90%;
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.about {
+  h5 {
+    color: $textColor;
+  }
+  h2 {
+    color: $textColor;
+    font-weight: bold;
+  }
+  p {
+    color: $textColor;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    i {
+      color: rgba(212, 214, 212, 1);
+      padding-right: 5px;
+    }
+    text-decoration: none;
+    transition: 0.4s;
+    color: rgba(212, 214, 212, 1);
+    &:hover {
+      color: $brandColor;
+    }
+  }
+
+  .text1 {
+    color: $textColor;
+    margin-top: 100px;
+    width: 80%;
+    line-height: 30px;
+  }
+  .name {
+    font-weight: bold;
+    color: $textColor;
+  }
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+  }
+}
+
+.project {
+  .col-md-10 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  h2 {
+    color: $textColor;
+    font-weight: bold;
+  }
+  p {
+    color: $textColor;
+  }
+  .col-md-6 {
+    position: relative;
+  }
+  .box1 {
+    position: absolute;
+    border-radius: 20px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    bottom: -14%;
+    right: -3%;
+    width: 70%;
+    .rep2{
+      left: -3%;
+      right: 0;
+    }
+    img {
+      width: 40%;
+    }
+    h6 {
+      color: $textColor;
+      font-weight: bold;
+    }
+  }
+  .box2 {
+    position: absolute;
+    border-radius: 20px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    bottom: -14%;
+    left: -5%;
+    width: 70%;
+    .rep2{
+      left: -3%;
+      right: 0;
+    }
+    img {
+      width: 40%;
+    }
+    h6 {
+      color: $textColor;
+      font-weight: bold;
+    }
+  }
+  .col-md-4 {
+    a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: gray;
+      transition: 0.4s;
+      i {
+        color: gray;
+        padding-right: 5px;
+      }
+      &:hover {
+        color: $brandColor;
+      }
+    }
+  }
+}
+
+.idea {
+  position: relative;
+  h2{
+    color: $textColor;
+    font-weight: bold;
+  }
+  h3{
+    color: $textColor;
+  }
+  a{
+    color: rgba(212, 214, 212, 1);
+    transition: all ease 0.4s;
+    i{
+      padding-right: 5px;
+      transition: all ease 0.4s;
+      color: rgba(212, 214, 212, 1);
+    }
+    &:hover{
+      color: $brandColor;
+    }
+  }
+  .box5{
+    background: rgba(250, 250, 250, 1);
+    height: 30vh;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 0 9%;
+    position: absolute;
+    bottom: -30%;
+    h1{
+      color: rgba(77, 83, 60, 1);
+    }
+  }
+}
+
+footer{
+  background: rgba(79, 85, 61, 1);
+  a {
+    text-decoration: none;
+    color: white;
+    transition: 0.4s;
+    &:hover{
+      color: $brandColor;
+    }
+  }
+  p{
+    color: rgba(182, 193, 151, 1);
+
+  }
+  .vector{
+    width: 100%;
+    background: rgba(93, 101, 68, 1);
+    height: 2px;
+
+  }
+  .vector2{
+    width: 100%;
+    background: rgba(93, 101, 68, 1);
+    height: 2px;
+    transform: rotate(90deg) translateY(30%);
+
+  }
+  li {
+    list-style: none;
+    a{
+      text-decoration: none;
+      color: rgba(182, 193, 151, 1);
+    }
+  }
+  i {
+    font-size: 2em;
+    color: rgba(68, 74, 52, 1);
+    transition: 0.4s;
+    &:hover{
+      color: $brandColor;
+    }
+  }
+}
+
+@media (max-width: 795px) {
+  header {
+    .nav-links {
+      right: 0;
+    }
+    .text{
+      bottom:-17%;
+    }
+    .logo{
+      width: 70%;
+    }
+    .home {
+      h1 {
+        font-size: 2em;
+      }
+
+    }
+  }
+
+  .about {
+    .text1 {
+      padding-top: 0px;
+      margin-top: 0px;
+      width: 90%;
+    }
+  }
+  .project {
+    h2 {
+      color: $textColor;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    p {
+      color: $textColor;
+      width: 100%;
+      font-size: 12px;
+    }
+    .box1 {
+      bottom: -40%;
+      right: 5%;
+      background-color: rgba(255, 255, 255, 0.288);
+      backdrop-filter: blur(1em);
+      animation: fadee 4s ease forwards infinite alternate;
+      @keyframes fadee {
+        0%{
+          backdrop-filter: blur(0);
+        }
+        100%{
+          backdrop-filter: blur(1em);
+        }
+        
+      }      
+      .text4 {
+        width: 90%;
+      }
+      h6 {
+        font-size: 11px;
+      }
+    }
+    .box2 {
+      bottom: -40%;
+      left: 3%;
+      background-color: rgba(255, 255, 255, 0.288);
+      backdrop-filter: blur(1em);
+      animation: fadee 4s ease forwards infinite alternate;
+      @keyframes fadee {
+        0%{
+          backdrop-filter: blur(0);
+        }
+        100%{
+          backdrop-filter: blur(1em);
+        }
+        
+      }
+      .text4 {
+        width: 90%;
+      }
+      h6 {
+        font-size: 11px;
+      }
+    }
+    .col-md-4 {
+      margin-top: 35%;
+
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: gray;
+        transition: 0.4s;
+        i {
+          color: gray;
+          padding-right: 5px;
+        }
+        &:hover {
+          color: $brandColor;
+        }
+      }
+    }
+  }
+  .idea {
+    .box5{
+      bottom: -19%;
+    }
+    
+  }
+  footer {
+    .vector2{
+      display: none;
+    }
+    ul {
+      margin-left: 10%;
+    }
+    .webo{
+      font-size: 8px;
+    }
+    .weboLogo{
+      width: 50%;
+    }
+  }
+}
